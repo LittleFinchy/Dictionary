@@ -18,4 +18,4 @@ word = input('Enter a word: ').lower()
 
 print(wordDef(word))
 
-#message to the user bragging bout how dumb/easy their word was haha lol
+# message to the user bragging bout how dumb/easy their word was
