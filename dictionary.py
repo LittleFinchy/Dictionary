@@ -32,6 +32,8 @@ def wordDef(w):
 			return data[w]
 		return ["No match found"]
 
+# if options list is empty say no match found
+# allow for user to say none when picking from options
 
 loop = True
 while loop:
