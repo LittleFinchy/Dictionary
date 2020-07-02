@@ -16,9 +16,13 @@ def wordDef(w):
 			return data[w]
 		try:
 			options = get_close_matches(w, data.keys(), 3)
-			for i in range(len(options)):
-				print(i+1, options[i])
-			w = options[int(input('Did you mean one of these? (type the number next to the correct option)'))-1]
+			if len(options) == 0:
+				w = ''
+			else:
+				for i in range(len(options)):
+					print(i+1, options[i])
+				print(str(len(options)+1)+' None of these')
+				w = options[int(input('Did you mean one of these? (type the number next to the correct option)'))-1]
 		except:
 			w = ""
 		if w in list(data.keys()):
@@ -32,8 +36,6 @@ def wordDef(w):
 			return data[w]
 		return ["No match found"]
 
-# if options list is empty say no match found
-# allow for user to say none when picking from options
 
 loop = True
 while loop:
@@ -46,5 +48,3 @@ while loop:
 	for item in answer:
 		print(item)
 	print('\n')
-
-# message to the user bragging bout how dumb/easy their word was
